@@ -66,7 +66,20 @@ export default function Home() {
       <div className={styles.slideshow}>
         {slides.map((slide, index) => (
           <div key={index} className={styles.slideshowItem}>
-            <Image src={`/ar${index + 1}.jpg`} alt={slide.title} width={800} height={400} />
+            <Image src={`/images/kumah.jpg`} alt={slide.title} width={800} height={400} />
+            <div className={styles.slideshowItemText}>
+              <h4>{slide.title}</h4>
+              <h2>{slide.headline}</h2>
+              <p>{slide.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className={styles.slideshow}>
+        {slides.map((slide, index) => (
+          <div key={index} className={styles.slideshowItem}>
+            <Image src={`/images/kumah.jpg`} alt={slide.title} width={800} height={400} />
             <div className={styles.slideshowItemText}>
               <h4>{slide.title}</h4>
               <h2>{slide.headline}</h2>
@@ -77,7 +90,7 @@ export default function Home() {
       </div>
       
       <footer className={styles.footer}>
-        <p><FaPhone /> +233 243008243</p>
+        <p><FaPhone /> </p>
         <p>Follow Us on Instagram. <Link href="https://www.instagram.com/p/CJ52rpUMVCU/?igshid=1kho7nuw3p2l2"><FaInstagram /></Link></p>
         <p>All Rights Reserved. 2021 Impressions. Accra, Ghana</p>
       </footer>
