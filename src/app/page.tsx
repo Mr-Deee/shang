@@ -26,12 +26,12 @@ export default function Home() {
   };
 
   const items: Item[] = [
-    { title: 'Portraits', src: '/por2.jpg' },
-    { title: 'Artworks', src: '/fash6.jpg' },
-    { title: 'Landscapes...', src: '/a9.jpg', width: 840 },
-    { title: 'Fashion', src: '/ar5.jpg' },
-    { title: 'Weddings', src: '/ar4.jpg', width: 840 },
-    { title: 'Events', src: '/atc1.jpg' }
+    { title: 'KUMAH', src: '/images/KUMAH.jpg' },
+    { title: '002', src: '/images/boarded0.6.png' },
+    { title: '003', src: '/images/boarded0.7.jpg', width: 840 },
+    { title: '004', src: '/images/boarded7.jpg'},
+    { title: '005', src: '/images/boarded8.jpg', width: 840 },
+    { title: '006', src: '/images/She.jpg' }
   ];
 
   const slides: Slide[] = [
@@ -43,7 +43,7 @@ export default function Home() {
   return (
     <div>
       <nav className={`${styles.topnav} ${menuOpen ? styles.responsive : ''}`}>
-        <div className={styles.title}><h2>Calitus Shang</h2></div>
+        <div className={styles.title}><h2>Calitus</h2></div>
         <Link href="/" className={styles.active}>Home</Link>
         <Link href="/gallery">Gallery</Link>
         <Link href="/contact">Contact</Link>
