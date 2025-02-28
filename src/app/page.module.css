@@ -94,24 +94,152 @@ body {
   object-fit: cover;
 }
 
-/* Slideshow */
+/* Slideshow Container */
 .slideshow {
   display: flex;
   overflow: hidden;
   width: 100%;
   height: 50vh;
+  position: relative;
 }
 
+/* Each Slide */
 .slideshowItem {
   position: relative;
   width: 100%;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .slideshowItem img {
   width: 100%;
   height: auto;
+  border-radius: 10px;
 }
 
+/* Hover Animation */
+.slideshowItem:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Text Overlay */
+.slideshowItemText {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  max-width: 80%;
+  transition: background 0.3s;
+}
+
+.slideshowItemText:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+/* Button Container */
+.buttonContainer {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+/* Buttons */
+.storyButton,
+.buyButton {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.storyButton {
+  background-color: red;
+  color: white;
+}
+
+.storyButton:hover {
+  background-color: darkred;
+}
+
+.buyButton {
+  background-color: green;
+  color: white;
+}
+
+.buyButton:hover {
+  background-color: darkgreen;
+}
+
+/* Modal Overlay */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Modal Content */
+.modalContent {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 500px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Close Button */
+.closeButton {
+  margin-top: 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.closeButton:hover {
+  background-color: darkred;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.story{
+  position: relative;
+
+  width: 100%;
+  height: 78vh;
+  
+  position: relative;
+  background-color: rgb(248, 248, 248);
+}
+
+
+
+.story P{
+  width: 100%;
+  font-weight: 800;
+ color: black;
+}
 .slideshowItemText {
   position: absolute;
   bottom: 20px;
