@@ -68,7 +68,13 @@ export default function Home() {
   "This painting questions the nature of peace—how it's shaped by our perception, mental state, and environment.",
   "Can inner peace exist amidst turmoil? Or does it transcend physical circumstances?"
     ]},
-    { title: '002', src: '/images/boarded7.jpg', headline: 'Designing is on its way.', desc: ['Design is intelligence made visible...' ]}
+    { title: 'Kwin and Queen', src: '/images/boarded0.7.jpg', headline: 'Designing is on its way.', desc: [  "In this piece, I explore the lives of two individuals—one from the West and one from Africa—each shaped by their unique race, geography, and culture.",
+      "Though their worlds appear different, their crowns are heavy with shared stories of resilience, hope, and the search for identity.",
+      "This artwork reflects the tensions, contrasts, and connections that bind us across borders.",
+      "🔸 Kwin embodies the urban sophistication of a Western metropolis. She thrives in an environment of towering skylines but feels disconnected from her roots.",
+      "🔸 Queen, grounded in African tradition, draws strength from her heritage but faces modern-day struggles that challenge her worldview.",
+      "The juxtaposition of these figures is a reminder that while geography and race shape our stories, the human experience is universal."
+    ]}
   ];
 
   return (
