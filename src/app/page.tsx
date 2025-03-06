@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaBars, FaPhone, FaTimes, FaInstagram } from 'react-icons/fa';
-import styles from './page.module.css';
+import styles from './home.css';
 
 interface Slide {
   title: string;
@@ -93,7 +93,7 @@ export default function Home() {
         {/* Hamburger Menu Button */}
         <button className={styles.icon} onClick={toggleMenu} aria-label="Toggle Menu">
           {menuOpen ? <FaTimes /> : <FaBars />}
-          <p></p>
+          <p>\</p>
         </button>
       </nav>
       
