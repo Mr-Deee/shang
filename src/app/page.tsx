@@ -3,8 +3,8 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaBars, FaPhone, FaTimes, FaInstagram } from 'react-icons/fa';
-import styles from './home.css';
+import { FaBars, FaPhone, FaTimes,FaInstagram } from 'react-icons/fa';
+import styles from './page.module.css';
 
 interface Slide {
   title: string;
@@ -32,6 +32,8 @@ export default function Home() {
   const [selectedStory, setSelectedStory] = useState<Slide | null>(null);
   
   const handleShowStory = (slide: Slide) => {
+    document.getElementById("stories")?.scrollIntoView({ behavior: "smooth" });
+
     setSelectedStory(slide);
   };
 
@@ -86,14 +88,14 @@ export default function Home() {
         </div>
         <div className={styles.navLinks}>
           <Link href="/" className={styles.active}>Home</Link>
-          <Link href="/Stories">Stories</Link>
+          <Link href="/#stories">Stories</Link>
           <Link href="/contact">Contact</Link>
           <Link href="/about">About</Link>
         </div>
         {/* Hamburger Menu Button */}
         <button className={styles.icon} onClick={toggleMenu} aria-label="Toggle Menu">
           {menuOpen ? <FaTimes /> : <FaBars />}
-          <p>\</p>
+          <p>MENU</p>
         </button>
       </nav>
       
@@ -106,7 +108,7 @@ export default function Home() {
         ))}
       </div>
 
-      <div className={styles.story}>
+      <div id="stories" className={styles.story}>
         <p>Stories</p>
         <div className={styles.slideshow}>
       {slides.map((slide, index) => (
@@ -129,7 +131,7 @@ export default function Home() {
         <div className={styles.modalOverlay} onClick={closeModal}>
           <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
             <h2>{selectedStory.title}</h2>
-            <p>{selectedStory.desc}</p>
+            <p className={styles.modalDesc}>{selectedStory.desc}</p>
             <button className={styles.closeButton} onClick={closeModal}>
               Close
             </button>
