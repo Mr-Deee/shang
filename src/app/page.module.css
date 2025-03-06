@@ -43,7 +43,7 @@
   display: none;
   background: none;
   border: none;
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: 20px;
   cursor: pointer;
 }
@@ -51,20 +51,31 @@
 /* Responsive Navigation */
 @media screen and (max-width: 768px) {
   .topnav {
-    flex-direction: column;
+    flex-direction: row;
+    align-items: flex-end;
   }
 
-  .topnav a {
-    display: block;
+  .navLinks {
+    display: none;
+    flex-direction: column;
     width: 100%;
-    text-align: center;
+  }
+
+  .responsive .navLinks {
+    display: flex;
   }
 
   .icon {
-    display: block;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
   }
 }
-
 /* Main Container */
 .container {
   display: flex;
@@ -72,7 +83,7 @@
   align-items: flex-end;
   height: 80vh;
   gap: 15px;
-  padding: 20px;
+  padding: 34px;
   overflow: hidden;
 }
 

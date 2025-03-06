@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaBars, FaPhone, FaInstagram } from 'react-icons/fa';
+import { FaBars, FaPhone, FaTimes, FaInstagram } from 'react-icons/fa';
 import styles from './page.module.css';
 
 interface Slide {
@@ -79,15 +79,21 @@ export default function Home() {
 
   return (
     <div>
-      <nav className={`${styles.topnav} ${menuOpen ? styles.responsive : ''}`}>
-        <div className={styles.title}><h2>Calitus</h2></div>
-        <Link href="/" className={styles.active}>Home</Link>
-        <Link href="/Stories">Stories</Link>
-        <Link href="/contact">Contact</Link>
-        <Link href="/about">About</Link>
-        <button className={styles.icon} onClick={toggleMenu}>
-          <FaBars />
-          <p>MENU</p>
+      {/* Navbar */}
+      <nav className={`${styles.topnav} ${menuOpen ? styles.responsive : ""}`}>
+        <div className={styles.title}>
+          <h2>Calitus</h2>
+        </div>
+        <div className={styles.navLinks}>
+          <Link href="/" className={styles.active}>Home</Link>
+          <Link href="/Stories">Stories</Link>
+          <Link href="/contact">Contact</Link>
+          <Link href="/about">About</Link>
+        </div>
+        {/* Hamburger Menu Button */}
+        <button className={styles.icon} onClick={toggleMenu} aria-label="Toggle Menu">
+          {menuOpen ? <FaTimes /> : <FaBars />}
+          <p></p>
         </button>
       </nav>
       
